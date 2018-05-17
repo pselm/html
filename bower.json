@@ -16,7 +16,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/rgrempel/purescript-elm.git"
+    "url": "git://github.com/pselm/html.git"
   },
   "resolutions": {
     "purescript-js-date": "^5.2.0"

@@ -110,6 +110,7 @@ module Html.Attributes
     where
 
 import Html (Attribute)
+import Data.Tuple.Nested (type (/\))
 import Elm.Default
 import Elm.Json.Encode as Json
 import Elm.List as List

@@ -17,6 +17,7 @@ module Html.Keyed
     )
     where
 
+import Data.Tuple.Nested (type (/\))
 import Html (Attribute, Html)
 import Elm.Default
 import Elm.VirtualDom as VirtualDom

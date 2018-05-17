@@ -14,7 +14,7 @@
 #### `node`
 
 ``` purescript
-node :: forall msg. String -> List (Attribute msg) -> List (String /\ (Html msg)) -> Html msg
+node :: forall f g msg. Foldable f => Foldable g => String -> f (Attribute msg) -> g (String /\ (Html msg)) -> Html msg
 ```
 
 > Works just like `Html.node`, but you add a unique identifier to each child
@@ -25,13 +25,13 @@ node :: forall msg. String -> List (Attribute msg) -> List (String /\ (Html msg)
 #### `ol`
 
 ``` purescript
-ol :: forall msg. List (Attribute msg) -> List (String /\ (Html msg)) -> Html msg
+ol :: forall f g msg. Foldable f => Foldable g => f (Attribute msg) -> g (String /\ (Html msg)) -> Html msg
 ```
 
 #### `ul`
 
 ``` purescript
-ul :: forall msg. List (Attribute msg) -> List (String /\ (Html msg)) -> Html msg
+ul :: forall f g msg. Foldable f => Foldable g => f (Attribute msg) -> g (String /\ (Html msg)) -> Html msg
 ```
 
 

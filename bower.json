@@ -1,0 +1,24 @@
+{
+  "name": "html",
+  "homepage": "https://github.com/pselm/html",
+  "description": "Elm's HTML library, ported to Purescript",
+  "license": "BSD3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-elm": "rgrempel/purescript-elm#00afb1e69ecec52a54a29cd90002f6ab5f4f51f0",
+    "purescript-typelevel-prelude": "^2.7.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rgrempel/purescript-elm.git"
+  },
+  "resolutions": {
+    "purescript-js-date": "^5.2.0"
+  }
+}

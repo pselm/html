@@ -112,10 +112,12 @@ module Html
     where
 
 import Elm.Default
+
 import Data.Tuple.Nested (type (/\))
 import Elm.Monoid (none)
 import Elm.Platform.Cmd ((!))
 import Elm.VirtualDom as VirtualDom
+import Prelude (Unit)
 
 
 -- CORE TYPES
@@ -212,7 +214,7 @@ beginnerProgram :: ∀ msg model.
     , view :: model -> Html msg
     , update :: msg -> model -> model
     }
-    -> Program Never model msg
+    -> Program Unit model msg
 beginnerProgram { model, view, update } =
     program
         { init : model ! []
@@ -236,7 +238,7 @@ program :: ∀ msg model.
     , subscriptions :: model -> Sub msg
     , view :: model -> Html msg
     }
-    -> Program Never model msg
+    -> Program Unit model msg
 program =
     VirtualDom.program
 

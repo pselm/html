@@ -17,26 +17,27 @@ module Html.Keyed
     )
     where
 
-import Data.Tuple.Nested (type (/\))
-import Html (Attribute, Html)
 import Elm.Default
+
+import Data.Foldable (class Foldable)
 import Elm.VirtualDom as VirtualDom
+import Html (Attribute, Html)
 
 
 -- | > Works just like `Html.node`, but you add a unique identifier to each child
 -- | > node. You want this when you have a list of nodes that is changing: adding
 -- | > nodes, removing nodes, etc. In these cases, the unique identifiers help make
 -- | > the DOM modifications more efficient.
-node :: ∀ msg. String -> List (Attribute msg) -> List ( String /\ Html msg ) -> Html msg
+node :: ∀ f g msg. Foldable f => Foldable g => String -> f (Attribute msg) -> g ( String /\ Html msg ) -> Html msg
 node =
     VirtualDom.keyedNode
 
 
-ol :: ∀ msg. List (Attribute msg) -> List ( String /\ Html msg ) -> Html msg
+ol :: ∀ f g msg. Foldable f => Foldable g => f (Attribute msg) -> g ( String /\ Html msg ) -> Html msg
 ol =
     node "ol"
 
 
-ul :: ∀ msg. List (Attribute msg) -> List ( String /\ Html msg ) -> Html msg
+ul :: ∀ f g msg. Foldable f => Foldable g => f (Attribute msg) -> g ( String /\ Html msg ) -> Html msg
 ul =
     node "ul"

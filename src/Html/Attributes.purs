@@ -109,13 +109,15 @@ module Html.Attributes
     )
     where
 
-import Html (Attribute)
 import Elm.Default
+
+import Data.Foldable (class Foldable, foldr)
+import Data.List (List(..))
 import Elm.Json.Encode as Json
-import Elm.List as List
 import Elm.String as String
-import Elm.Tuple as Tuple
 import Elm.VirtualDom as VirtualDom
+import Html (Attribute)
+import Prelude ((>>>))
 
 
 -- This library does not include low, high, or optimum because the idea of a
@@ -140,7 +142,7 @@ import Elm.VirtualDom as VirtualDom
 -- | There is no `Html.Styles` module because best practices for working with HTML
 -- | suggest that this should primarily be specified in CSS files. So the general
 -- | recommendation is to use this function lightly.
-style :: ∀ msg. List ( String /\ String ) -> Attribute msg
+style :: ∀ f msg. Foldable f => f ( String /\ String ) -> Attribute msg
 style =
     VirtualDom.style
 
@@ -160,14 +162,15 @@ style =
 -- |           ]
 -- |         ]
 -- |         [ text msg.content ]
-classList :: ∀ msg. List ( String /\ Bool ) -> Attribute msg
-classList list =
-    list
-        |> List.filter Tuple.second
-        |> List.map Tuple.first
-        |> String.join " "
-        |> class_
-
+classList :: ∀ f msg. Foldable f => f ( String /\ Bool ) -> Attribute msg
+classList =
+    foldr checkFlag Nil >>> String.join " " >>> class_
+    where
+        checkFlag (className /\ flag) memo =
+            if flag then
+                className : memo
+            else
+                memo
 
 
 -- CUSTOM ATTRIBUTES

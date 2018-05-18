@@ -10,7 +10,7 @@
     "output"
   ],
   "dependencies": {
-    "purescript-elm": "rgrempel/purescript-elm#e3811fd3e73769ac6eeecacb7ba04aeca458d865",
+    "purescript-elm": "rgrempel/purescript-elm#0987255cd8c9240eab7b147b9e6add3993d5f91f",
     "purescript-typelevel-prelude": "^2.7.0"
   },
   "devDependencies": {},

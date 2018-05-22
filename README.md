@@ -1,4 +1,4 @@
-# HTML for Elm
+# purescript-pselm-html
 
 This is a port of [Elm's `Html` library](https://github.com/elm-lang/html) to Purescript.
 

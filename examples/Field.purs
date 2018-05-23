@@ -7,9 +7,9 @@ import Control.Monad.Eff (Eff)
 import Control.Monad.IO (INFINITY, runIO)
 import Elm.Platform (runProgram)
 import Elm.String (reverse) as String
-import Html (beginnerProgram, div, input, text)
-import Html.Attributes (placeholder, style)
-import Html.Events (onInput)
+import Elm.Html (beginnerProgram, div, input, text)
+import Elm.Html.Attributes (placeholder, style)
+import Elm.Html.Events (onInput)
 import Prelude (Unit, unit, ($))
 
 

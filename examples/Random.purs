@@ -9,8 +9,8 @@ import Elm.Platform (runProgram)
 import Elm.Platform.Cmd (none) as Cmd
 import Elm.Platform.Sub (none) as Sub
 import Elm.Random (generate, int) as Random
-import Html (Html, button, div, h1, program, text)
-import Html.Events (onClick)
+import Elm.Html (Html, button, div, h1, program, text)
+import Elm.Html.Events (onClick)
 import Prelude (class Eq, Unit, unit, ($))
 
 

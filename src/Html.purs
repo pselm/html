@@ -1,7 +1,7 @@
 
 -- | A port of Elm's HTML library to Purescript. 
 
-module Html
+module Elm.Html
     ( Html
     , Attribute
     , text

@@ -1,7 +1,7 @@
 module Examples.UnorderedList where
 
-import Html (Html, beginnerProgram, li, text, ul)
-import Html.Attributes
+import Elm.Html (Html, beginnerProgram, li, text, ul)
+import Elm.Html.Attributes
 
 import Control.Monad.Aff (launchAff_)
 import Control.Monad.Eff (Eff)

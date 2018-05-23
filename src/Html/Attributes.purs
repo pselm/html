@@ -6,7 +6,7 @@
 -- | If you cannot find what you are looking for, go to the [Custom
 -- | Attributes](#custom-attributes) section to learn how to create new helpers.
 
-module Html.Attributes
+module Elm.Html.Attributes
     ( style
     , property
     , attribute
@@ -116,7 +116,7 @@ import Data.List (List(..))
 import Elm.Json.Encode as Json
 import Elm.String as String
 import Elm.VirtualDom as VirtualDom
-import Html (Attribute)
+import Elm.Html (Attribute)
 import Prelude ((>>>))
 
 

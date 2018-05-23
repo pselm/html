@@ -12,7 +12,7 @@
 -- | if you look at the source, you ought to be able to construct them
 -- | yourself).
 
-module Html.Events
+module Elm.Html.Events
     ( onClick
     , onDoubleClick
     , onMouseDown
@@ -40,7 +40,7 @@ import Elm.Default
 
 import Elm.Json.Decode as Json
 import Elm.VirtualDom as VirtualDom
-import Html (Attribute)
+import Elm.Html (Attribute)
 import Prelude (class Eq)
 
 

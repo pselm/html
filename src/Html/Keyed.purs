@@ -10,7 +10,7 @@
 -- | > makes it possible for the underlying diffing algorithm to reuse nodes more
 -- | > efficiently.
 
-module Html.Keyed
+module Elm.Html.Keyed
     ( node
     , ol
     , ul
@@ -21,7 +21,7 @@ import Elm.Default
 
 import Data.Foldable (class Foldable)
 import Elm.VirtualDom as VirtualDom
-import Html (Attribute, Html)
+import Elm.Html (Attribute, Html)
 
 
 -- | > Works just like `Html.node`, but you add a unique identifier to each child

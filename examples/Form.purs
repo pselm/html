@@ -6,9 +6,9 @@ import Control.Monad.Aff (launchAff_)
 import Control.Monad.Eff (Eff)
 import Control.Monad.IO (INFINITY, runIO)
 import Elm.Platform (runProgram)
-import Html (Html, beginnerProgram, div, input, text)
-import Html.Attributes (placeholder, style, type_)
-import Html.Events (onInput)
+import Elm.Html (Html, beginnerProgram, div, input, text)
+import Elm.Html.Attributes (placeholder, style, type_)
+import Elm.Html.Events (onInput)
 import Prelude (Unit, unit, ($))
 
 

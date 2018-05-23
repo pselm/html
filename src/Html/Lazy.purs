@@ -11,7 +11,7 @@
 -- | > This is a really cheap test and often makes things a lot faster, but definitely
 -- | > benchmark to be sure!
 
-module Html.Lazy
+module Elm.Html.Lazy
     ( lazy, lazy_
     , lazy2, lazy2_
     , lazy3, lazy3_
@@ -19,7 +19,7 @@ module Html.Lazy
     where
 
 import Elm.VirtualDom as VirtualDom
-import Html (Html)
+import Elm.Html (Html)
 import Prelude (class Eq)
 
 

@@ -1,6 +1,6 @@
 module Examples.HelloWorld where
 
-import Html
+import Elm.Html
 
 import Control.Monad.Aff (launchAff_)
 import Control.Monad.Eff (Eff)

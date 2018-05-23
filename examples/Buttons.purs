@@ -6,8 +6,8 @@ import Control.Monad.Aff (launchAff_)
 import Control.Monad.Eff (Eff)
 import Control.Monad.IO (INFINITY, runIO)
 import Elm.Platform (runProgram)
-import Html (Html, beginnerProgram, button, div, text)
-import Html.Events (onClick)
+import Elm.Html (Html, beginnerProgram, button, div, text)
+import Elm.Html.Events (onClick)
 import Prelude (class Eq, Unit, unit, ($))
 
 
